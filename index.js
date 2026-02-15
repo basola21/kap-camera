@@ -90,7 +90,7 @@ const willStartRecording = async ({state, config, apertureOptions: {screenId, cr
     frame: false,
     transparent: true,
     titleBarStyle: 'customButtonsOnHover',
-    webPreferences: {nodeIntegration: true}
+    webPreferences: {nodeIntegration: true, contextIsolation: false, enableRemoteModule: true}
   });
 
   state.window.loadFile(contentPath);
