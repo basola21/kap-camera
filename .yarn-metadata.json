@@ -1,0 +1,59 @@
+{
+  "manifest": {
+    "name": "kap-camera-local",
+    "version": "1.2.1",
+    "main": "index.js",
+    "description": "Show a camera while recording.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/karaggeorge/kap-camera.git"
+    },
+    "author": {
+      "name": "George Karagkiaouris",
+      "email": "gkaragkiaouris2@gmail.com",
+      "url": "https://gkaragkiaouris.tech"
+    },
+    "keywords": [
+      "kap-plugin",
+      "camera",
+      "face",
+      "webcam",
+      "recording"
+    ],
+    "kap": {
+      "version": ">=3.3.2"
+    },
+    "license": "MIT",
+    "scripts": {
+      "build-devices": "swiftc -o video-devices -target 'arm64-apple-macosx14.0' video-devices.swift",
+      "build-permissions": "swiftc -o permissions -target 'arm64-apple-macosx14.0' permissions.swift",
+      "build": "yarn run build-devices && yarn run build-permissions"
+    },
+    "files": [
+      "index.js",
+      "video-devices",
+      "permissions",
+      "index.html"
+    ],
+    "peerDependencies": {
+      "electron": "*"
+    },
+    "dependencies": {
+      "electron-util": "^0.14.2",
+      "execa": "^4.0.3"
+    },
+    "_registry": "npm",
+    "_loc": "/Users/basel/Library/Caches/Yarn/v6/npm-kap-camera-local-1.2.1-c2c08585-3177-4ee9-bdb1-5350622ef46f-1771114973651/node_modules/kap-camera-local/package.json",
+    "readmeFilename": "readme.md",
+    "readme": "# kap-camera\n\n> [Kap](https://github.com/wulkano/kap) plugin - Show a camera while recording\n\n## Install\n\nIn the `Kap` menu, go to `Preferences…`, select the `Plugins` pane, find this plugin, and toggle it.\n\n## Usage\n\nIn the cropper or by right-clicking the tray icon, click the `…` icon, then `Plugins` and make sure `Show Camera` is enabled.\n\nThe plugin creates a window showing the selected camera on the bottom-left corner of the recording.\nThe window is click-through and its hover opacity and size can be adjusted.\n\nTo move the window, hold Command before you hover over it, then click and drag it anywhere on the screen\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "type": "copy",
+    "registry": "npm",
+    "hash": "c2c08585-3177-4ee9-bdb1-5350622ef46f-1771114973651",
+    "reference": "/Users/basel/Library/Application Support/Kap/plugins/node_modules/kap-camera-local"
+  },
+  "registry": "npm",
+  "hash": "c2c08585-3177-4ee9-bdb1-5350622ef46f-1771114973651"
+}
