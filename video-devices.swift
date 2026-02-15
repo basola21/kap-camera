@@ -1,2 +1,13 @@
 import AVFoundation
-print(AVCaptureDevice.devices(for: .video).map { $0.localizedName }.joined(separator: "\n"))
+
+let discoverySession = AVCaptureDevice.DiscoverySession(
+    deviceTypes: [
+        .builtInWideAngleCamera,
+        .external,
+        .continuityCamera
+    ],
+    mediaType: .video,
+    position: .unspecified
+)
+
+print(discoverySession.devices.map { $0.localizedName }.joined(separator: "\n"))
